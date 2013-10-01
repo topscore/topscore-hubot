@@ -2,5 +2,5 @@
   "redis-brain.coffee", "shipit.coffee","applause.coffee","archer.coffee",
   "availability.coffee","aws.coffee","aww.coffee","bang-bang.coffee","base64.coffee",
   "decide.coffee", "countdown.coffee", "coin.coffee", "chuck-norris.coffee", "carlton.coffee",
-  "calm-down.coffee", "buscemi.coffee", "brb.coffee", "bitcoin.coffee"
+  "calm-down.coffee", "buscemi.coffee", "brb.coffee", "bitcoin.coffee", "foaas.coffee"
 ]
