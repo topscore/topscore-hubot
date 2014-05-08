@@ -1,7 +1,7 @@
 [
   "redis-brain.coffee", "shipit.coffee","applause.coffee",
   "availability.coffee","aws.coffee","aww.coffee","bang-bang.coffee","base64.coffee",
-  "decide.coffee", "countdown.coffee", "coin.coffee", "chuck-norris.coffee", "carlton.coffee",
+  "decide.coffee", "countdown.coffee", "coin.coffee", "chuck-norris.coffee", 
   "buscemi.coffee", "brb.coffee", "bitcoin.coffee", "foass.coffee",
   "party_gifs.coffee", "reddit-jokes.coffee", "reddit-random-top.coffee", "reddit.coffee",
   "romanemperor.coffee", "scotch.coffee", "swanson.coffee", "thanks-obama.coffee",
