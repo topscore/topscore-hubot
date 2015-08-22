@@ -1,9 +1,9 @@
 {
   "name": "topscorebot",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
   "author": "Grin <alex@usetopscore.com>",
-  "description": "Robot Slave Monkey",
+  "description": "Our hipchat bot",
   "dependencies": {
     "hubot": "^2.15.0",
     "hubot-diagnostics": "0.0.1",
@@ -20,6 +20,7 @@
     "hubot-shipit": "^0.2.0"
   },
   "engines": {
-    "node": "0.10.x"
+    "node": "0.12.x",
+    "npm": "2.14.x"
   }
 }
