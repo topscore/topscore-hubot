@@ -5,6 +5,9 @@
   "author": "Grin <alex@usetopscore.com>",
   "description": "Our hipchat bot",
   "dependencies": {
+    "aws2js": "^0.8.3",
+    "cheerio": "^0.19.0",
+    "htmlparser": "^1.7.7",
     "hubot": "^2.15.0",
     "hubot-diagnostics": "0.0.1",
     "hubot-google-images": "^0.2.1",
@@ -17,7 +20,15 @@
     "hubot-redis-brain": "0.0.3",
     "hubot-rules": "^0.1.1",
     "hubot-scripts": "^2.16.2",
-    "hubot-shipit": "^0.2.0"
+    "hubot-shipit": "^0.2.0",
+    "jsdom": "3.1.2",
+    "moment": "^2.10.6",
+    "nodepie": "^0.6.7",
+    "request": "^2.61.0",
+    "soupselect": "^0.2.0",
+    "sprintf": "^0.1.5",
+    "underscore": "^1.8.3",
+    "xml2js": "^0.4.10"
   },
   "engines": {
     "node": "0.12.x",
