@@ -1,12 +1,12 @@
 [
   "redis-brain.coffee", "shipit.coffee","applause.coffee",
   "availability.coffee","aws.coffee","aww.coffee","bang-bang.coffee","base64.coffee",
-  "decide.coffee", "countdown.coffee", "coin.coffee", "chuck-norris.coffee", 
+  "decide.coffee", "countdown.coffee", "coin.coffee", "chuck-norris.coffee",
   "buscemi.coffee", "brb.coffee", "bitcoin.coffee", "foass.coffee",
   "party_gifs.coffee", "reddit-jokes.coffee", "reddit-random-top.coffee", "reddit.coffee",
   "romanemperor.coffee", "scotch.coffee", "swanson.coffee", "thanks-obama.coffee",
   "wits.coffee", "yell.coffee", "google.coffee", "goooood.coffee", "hackernews.coffee",
-  "haters.coffee", "look-of-disapproval.coffee", "megusta.coffee", 
+  "haters.coffee", "look-of-disapproval.coffee", "megusta.coffee",
   "mitch-hedberg.coffee", "mtg.coffee", "news.coffee", "newrelic.coffee", "lastfm_np.coffee",
-  "vanity.coffee","karma.coffee"
+  "vanity.coffee"
 ]
