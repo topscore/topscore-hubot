@@ -36,6 +36,9 @@ class Karma
       if @robot.brain.data.karma
         @cache = @robot.brain.data.karma
 
+  ltrim: (str, char) ->
+    return (str + '').replace(new RegExp('^[' + char.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + ']+', 'g'), '');
+
   kill: (thing) ->
     delete @cache[thing]
     @robot.brain.data.karma = @cache
@@ -91,7 +94,7 @@ module.exports = (robot) ->
   allow_self = process.env.KARMA_ALLOW_SELF or "true"
 
   robot.hear /(\S+[^+:\s])[: ]*\+\+(\s|$)/, (msg) ->
-    subject = msg.match[1].toLowerCase()
+    subject = karma.ltrim(msg.match[1].toLowerCase(),'@')
     if allow_self is true or msg.message.user.name.toLowerCase() != subject
       karma.increment subject
       msg.send "#{subject} #{karma.incrementResponse()} (Karma: #{karma.get(subject)})"
@@ -99,7 +102,7 @@ module.exports = (robot) ->
       msg.send msg.random karma.selfDeniedResponses(msg.message.user.name)
 
   robot.hear /(\S+[^-:\s])[: ]*--(\s|$)/, (msg) ->
-    subject = msg.match[1].toLowerCase()
+    subject = karma.ltrim(msg.match[1].toLowerCase(), '@')
     if allow_self is true or msg.message.user.name.toLowerCase() != subject
       karma.decrement subject
       msg.send "#{subject} #{karma.decrementResponse()} (Karma: #{karma.get(subject)})"
@@ -107,7 +110,7 @@ module.exports = (robot) ->
       msg.send msg.random karma.selfDeniedResponses(msg.message.user.name)
 
   robot.respond /karma empty ?(\S+[^-\s])$/i, (msg) ->
-    subject = msg.match[1].toLowerCase()
+    subject = karma.ltrim(msg.match[1].toLowerCase(), '@')
     if allow_self is true or msg.message.user.name.toLowerCase() != subject
       karma.kill subject
       msg.send "#{subject} has had its karma scattered to the winds."
@@ -133,6 +136,6 @@ module.exports = (robot) ->
     msg.send verbiage.join("\n")
 
   robot.respond /karma (\S+[^-\s])$/i, (msg) ->
-    match = msg.match[1].toLowerCase()
+    match = karma.ltrim(msg.match[1].toLowerCase(), '@')
     if match != "best" && match != "worst" && match != "all"
       msg.send "\"#{match}\" has #{karma.get(match)} karma."
